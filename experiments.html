@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/experiments.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -25,7 +26,7 @@
                 <ol id="header-top-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="experiments.html">Experiments</a></li>
-                    <li><a href="https://learn.rrc.ca/d2l/eP/presentations/presentation_preview_popup.d2l?presId=48547" target="_blak">ePortfolio</a></li>
+                    <li><a href="https://learn.rrc.ca/d2l/eP/presentations/presentation_preview_popup.d2l?presId=48547" target="_blank">ePortfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ol>
             </nav>
@@ -36,7 +37,14 @@
 
                 <h2>This page lists out my experiments by categories.</h2>
 
-                <div class="experiment-group">
+                <nav class="category-nav">
+                    <ul>
+                        <li><a href="#" id="category-web-dev">Web Dev</a></li>
+                        <li><a href="#" id="category-cs">C#</a></li>
+                    </ul>
+                </nav>
+
+                <div class="experiment-group" id="experiment-group-web-dev">
                     <h3>Web Dev:</h3>
 
                     <section class="experiment" id="exp_cms4movies">
@@ -111,7 +119,7 @@
                     </section>
                 </div>
 
-                <div class="experiment-group">
+                <div class="experiment-group" id="experiment-group-cs">
                     <h3>C#:</h3>
 
                     <section class="experiment" id="exp_adev2">
@@ -138,7 +146,7 @@
                     <ol>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="experiments.html">Experiments</a></li>
-                        <li><a href="https://learn.rrc.ca/d2l/eP/presentations/presentation_preview_popup.d2l?presId=48547" target="_blak">ePortfolio</a></li>
+                        <li><a href="https://learn.rrc.ca/d2l/eP/presentations/presentation_preview_popup.d2l?presId=48547" target="_blank">ePortfolio</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ol>
                 </nav>
@@ -153,5 +161,19 @@
             </div>
         </footer>
     </div>
+
+<script>
+    $(document).ready(function(){
+        $('.category-nav a').click(function() {
+            $('.category-nav a').removeClass('selected');
+            $(`#${this.id}`).addClass('selected');
+
+            $('.experiment-group').hide();
+            $(`#${this.id.replace('category', 'experiment-group')}`).show();
+        });
+
+        $('.category-nav a').first().trigger('click');
+    });
+</script>
 </body>
 </html>
