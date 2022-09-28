@@ -1,0 +1,98 @@
+<!-------w-----------
+
+    Project 3
+    Name: Yue Kwong Kevin Lau
+    Date: April 16, 2022
+    Description: This is the Contact page for Project 3: WEBSITE DEVELOPMENT & DEPLOYMENT.
+
+-------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact - Kevin's Coding Lab</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/contactForm.js"></script>
+    <script src="js/utilityFunctions.js"></script> 
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div id="logo-container"><img id="logo" src="images/logo.jpg" alt="Kevin's Coding Lab - Logo" /><span id="site-title1">Kevin's Coding Lab</span></div>
+            <nav id="header-nav">
+                <div id="site-title2">Kevin's Coding Lab</div>
+                <ol id="header-top-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experiments.html">Experiments</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ol>
+            </nav>
+        </header>
+        <main id="main">
+            <article>
+                <h1>Contact</h1>
+
+                <section>
+                    <h2>Please fill out and submit the form below:</h2>
+
+                    <form id="contactForm"
+                          action="https://extracomm.com/kevin/en.nsf/wSaveContact?OpenAgent" 
+                          method="post">
+                        <fieldset id="contactInfo">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <label for="fullname">Full Name</label>
+                                        <input id="fullname" name="fullname" type="text" />
+                                        <p class="error" id="fullname_error">* Required field</p>
+                                    </li>
+                                    <li>
+                                        <label for="phone">Phone Number</label>
+                                        <input id="phone" name="phone" type="tel" />
+                                        <p class="error" id="phone_error">* Required field</p>
+                                        <p class="error" id="phoneformat_error">* Invalid phone number</p>
+                                    </li>
+                                    <li>
+                                        <label for="email">Email</label>
+                                        <input id="email" name="email" type="text" />
+                                        <p class="error" id="email_error">* Required field</p>
+                                        <p class="error" id="emailformat_error">* Invalid email address</p>
+                                    </li>
+                                    <li>
+                                        <label for="comments">Comments</label>
+                                        <textarea id="comments" name="comments" rows="7" cols="50"></textarea>
+                                    </li>
+                                    <li class="center">
+                                        <button type="submit" id="btnSubmit">Submit</button>
+                                        <button type="reset" id="btnReset">Reset</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+            </article>
+        </main>
+        <footer id="footer">
+            <div id="footer-top-container">
+                <nav>
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="experiments.html">Experiments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div id="footer-middle-container">
+                Designed by Kevin Lau. <a href="https://www.linkedin.com/in/kevin-lau-yk/" target="_blank"><img id="linkedInLogo" src="images/linkedin.png" alt="Kevin's LinkedIn"></a>
+            </div>
+            <div id="footer-bottom-container">
+                <ol>
+                    <li>A RRC Polytech WEBD-1008 Project.</li>
+                </ol>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

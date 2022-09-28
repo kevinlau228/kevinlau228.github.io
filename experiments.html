@@ -1,0 +1,123 @@
+<!-------w-----------
+
+    Project 3
+    Name: Yue Kwong Kevin Lau
+    Date: April 16, 2022
+    Description: This is the Experiments page for Project 3: WEBSITE DEVELOPMENT & DEPLOYMENT.
+
+-------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Experiments - Kevin's Coding Lab</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/experiments.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div id="logo-container"><img id="logo" src="images/logo.jpg" alt="Kevin's Coding Lab - Logo" /><span id="site-title1">Kevin's Coding Lab</span></div>
+            <nav id="header-nav">
+                <div id="site-title2">Kevin's Coding Lab</div>
+                <ol id="header-top-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experiments.html">Experiments</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ol>
+            </nav>
+        </header>
+        <main id="main">
+            <article>
+                <h1>Experiments</h1>
+
+                <h2>This page lists out my experiments by categories.</h2>
+
+                <div class="experiment-group">
+                    <h3>Web Dev:</h3>
+
+                    <section class="experiment" id="exp_api_tree_inventory">
+                        <div class="exp_header">
+                            <h4 class="exp_title">Get and display data collected from the "Tree Inventory" API</h4>
+                            <p class="exp_date">Apr 23, 2022</p>
+                        </div>
+                        <div class="exp_desc">
+                            <p>The pie chart below presents the tree inventory data returned by the API.</p>
+                            <div id="tree_inventory_piechart"></div>
+                            <p>
+                                <span class="api line">API Used:</span> <span class="line"><a href="https://data.winnipeg.ca/Parks/Tree-Inventory/hfwk-jp4h" target="_blank">City of Winnipeg: Tree Inventory</a></span>
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="experiment" id="exp_api_waste_collection_days">
+                        <div class="exp_header">
+                            <h4 class="exp_title">Get and display data collected from the "Recycling, Garbage and Yard Waste Collection Days" API</h4>
+                            <p class="exp_date">Apr 18, 2022</p>
+                        </div>
+                        <div class="exp_desc">
+                            <p>The table below presents the first 20 JSON objects returned by the API.</p>
+                            <table id="exp_api_waste_collection_days_table">
+                                <caption><span class="line">Recycling, Garbage and</span> <span class="line">Yard Waste Collection Days</span></caption>
+                                <thead>
+                                    <tr>
+                                        <th>Address ID</th>
+                                        <th>Combined Address</th>
+                                        <th>Collection Day</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <p>
+                                <span class="api line">API Used:</span> <span class="line"><a href="https://data.winnipeg.ca/Water-and-Waste/Recycling-Garbage-and-Yard-Waste-Collection-Days/6rcy-9uik" target="_blank">City of Winnipeg: Recycling, Garbage and Yard Waste Collection Days</a></span>
+                            </p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="experiment-group">
+                    <h3>C#:</h3>
+
+                    <section class="experiment" id="exp_adev2">
+                        <div class="exp_header">
+                            <h4 class="exp_title">An application for the hypothetical RRC Automotive Group</h4>
+                            <p class="exp_date">Apr 20, 2022</p>
+                        </div>
+                        <div class="exp_desc">
+                            <p>This application is the final product of my ADEV-2008 project.</p>
+                            <p class="center">
+                                <img src="images/adev2_screen_1.png" alt="Vehicle Sales Quote Form">
+                                <img src="images/adev2_screen_2.png" alt="Cash Wash Form">
+                                <img src="images/adev2_screen_3.png" alt="Vehicle Data Form">
+                            </p>
+                            <p><span class="download line">Download:</span> <span class="line"><a href="files/ADEV2.zip">ADEV2.zip</a></span></p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+        <footer id="footer">
+            <div id="footer-top-container">
+                <nav>
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="experiments.html">Experiments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div id="footer-middle-container">
+                Designed by Kevin Lau. <a href="https://www.linkedin.com/in/kevin-lau-yk/" target="_blank"><img id="linkedInLogo" src="images/linkedin.png" alt="Kevin's LinkedIn"></a>
+            </div>
+            <div id="footer-bottom-container">
+                <ol>
+                    <li>A RRC Polytech WEBD-1008 Project.</li>
+                </ol>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
